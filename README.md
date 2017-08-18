@@ -23,7 +23,7 @@
 **项目结构** 
 ```
 renren-security
-├─doc  项目SQL语句 test
+├─doc  项目SQL语句
 ├─renren-common 公共模块
 │  ├─annotation 公共注解
 │  ├─oss 云存储服务
