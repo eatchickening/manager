@@ -19,11 +19,11 @@
 - 引入云存储服务，已支持：七牛云、阿里云、腾讯云等
 - 引入路由机制，刷新页面会停留在当前页
 
-
+  
 **项目结构** 
 ```
 renren-security
-├─doc  项目SQL语句
+├─doc  项目SQL语句 test
 ├─renren-common 公共模块
 │  ├─annotation 公共注解
 │  ├─oss 云存储服务
