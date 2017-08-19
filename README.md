@@ -105,7 +105,7 @@ renren-security
 - 项目访问路径：http://localhost
 - 非Maven方式启动，则默认访问路径为：http://localhost:8080/renren-security
 - 账号密码：admin/admin
-test
+test ssh
 
 
 
