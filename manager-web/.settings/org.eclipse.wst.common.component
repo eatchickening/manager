@@ -2,8 +2,7 @@
     <wb-module deploy-name="teacher-manager">
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/"/>
         <dependent-module archiveName="manager-dal-2.1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/manager-dal/manager-dal">
             <dependency-type>uses</dependency-type>
         </dependent-module>

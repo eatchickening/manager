@@ -63,7 +63,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>dispatcher</servlet-name>
-    <url-pattern>/</url-pattern>
+    <url-pattern>/*</url-pattern>
   </servlet-mapping>
   <servlet>
     <servlet-name>DruidStatView</servlet-name>
