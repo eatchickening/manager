@@ -67,7 +67,7 @@
   </servlet-mapping>
    <servlet-mapping>
     <servlet-name>dispatcher</servlet-name>
-    <url-pattern>/release/*</url-pattern>
+    <url-pattern>/src/*</url-pattern>
   </servlet-mapping>
   <servlet>
     <servlet-name>DruidStatView</servlet-name>
