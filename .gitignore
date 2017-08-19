@@ -29,5 +29,5 @@ manager-web/src/main/webapp/node_modules/**
 manager-web/src/main/webapp/.tmp/**
 manager-web/src/main/webapp/release/**
 */.classpath
->>>>>>> b4cfe86b002adaae1aac7ca59c6b2ab7f2434272
-manager-dal/src/main/resources/db.properties
+*/.settings/**
+.settings/**
