@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="manager-web">
+    <wb-module deploy-name="teacher-manager">
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-        <dependent-module archiveName="manager-dal-${manager-version}.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/manager-dal/manager-dal">
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/"/>
+        <dependent-module archiveName="manager-dal-2.1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/manager-dal/manager-dal">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="manager-shiro-${manager-version}.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/manager-shiro/manager-shiro">
+        <dependent-module archiveName="manager-shiro-2.1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/manager-shiro/manager-shiro">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <property name="context-root" value="teacher-manager"/>

@@ -1,0 +1,33 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Java template
+*.class
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+/.idea/
+target/
+*.DS_Store
+#/.settings/
+*.iml
+.project
+.settings
+=======
+manager-web/src/main/webapp/bower_components/**
+manager-web/src/main/webapp/node_modules/**
+manager-web/src/main/webapp/.tmp/**
+manager-web/src/main/webapp/release/**
+*/.classpath
+>>>>>>> b4cfe86b002adaae1aac7ca59c6b2ab7f2434272
+manager-dal/src/main/resources/db.properties
