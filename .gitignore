@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # Created by .ignore support plugin (hsz.mobi)
 ### Java template
@@ -24,3 +25,10 @@ target/
 *.iml
 .project
 .settings
+=======
+manager-web/src/main/webapp/bower_components/**
+manager-web/src/main/webapp/node_modules/**
+manager-web/src/main/webapp/.tmp/**
+manager-web/src/main/webapp/release/**
+*/.classpath
+>>>>>>> b4cfe86b002adaae1aac7ca59c6b2ab7f2434272

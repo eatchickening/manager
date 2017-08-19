@@ -52,7 +52,7 @@
 	</bean>
 	
 	<bean id="velocityConfigurer" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
-        <property name="resourceLoaderPath" value="/WEB-INF/page/" />
+        <property name="resourceLoaderPath" value="/release/" />
         <property name="velocityProperties">
           <props>
             <prop key="input.encoding">UTF-8</prop>
@@ -64,7 +64,7 @@
 	
 	<!-- JSP视图解析器  -->
     <bean id="viewResolverJsp" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/page/"/>
+        <property name="prefix" value="/release/"/>
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
         <property name="viewNames" value="*.jsp" />
         <property name="suffix" value=""/>
@@ -82,7 +82,7 @@
 	</bean>
 	
 	<bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
-	    <property name="templateLoaderPath" value="/WEB-INF/page/"/>
+	    <property name="templateLoaderPath" value="/release/"/>
 	</bean>
 	
 	<bean id="multipartResolver"
