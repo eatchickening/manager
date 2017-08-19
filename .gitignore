@@ -23,7 +23,6 @@ target/
 *.iml
 .project
 .settings
-=======
 manager-web/src/main/webapp/bower_components/**
 manager-web/src/main/webapp/node_modules/**
 manager-web/src/main/webapp/.tmp/**
@@ -31,3 +30,4 @@ manager-web/src/main/webapp/release/**
 */.classpath
 */.settings/**
 .settings/**
+*/.project
