@@ -58,8 +58,6 @@
     <servlet-name>dispatcher</servlet-name>
     <url-pattern>/src/*</url-pattern>
   </servlet-mapping>
-
-  
   
   <servlet>
     <servlet-name>DruidStatView</servlet-name>
