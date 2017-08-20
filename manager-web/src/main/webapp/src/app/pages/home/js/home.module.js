@@ -15,6 +15,6 @@
             });
     }
 
-    angular.module('BlurAdmin.pages.login', [])
+    angular.module('BlurAdmin.pages.home', [])
         .config(routeConfig);
 })();
