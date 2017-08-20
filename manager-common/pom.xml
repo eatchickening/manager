@@ -7,9 +7,8 @@
     <artifactId>manager</artifactId>
     <version>${manager-version}</version>
   </parent>
-  <groupId>team.manager</groupId>
   <artifactId>manager-common</artifactId>
-  <version>${manager-version}</version>
+  <packaging>jar</packaging>
   <name>manager-common</name>
   <url>http://maven.apache.org</url>
   <properties>

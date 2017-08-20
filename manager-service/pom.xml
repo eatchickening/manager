@@ -7,13 +7,19 @@
 		<artifactId>manager</artifactId>
 		<version>${manager-version}</version>
 	</parent>
-  <artifactId>manager-service</artifactId>
-  <name>manager-service</name>
-  <url>http://maven.apache.org</url>
+	<artifactId>manager-service</artifactId>
+	<packaging>jar</packaging>
+    <description>公共模块</description>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
+   <dependency>
+		<groupId>team.manager</groupId>
+           <artifactId>manager-dal</artifactId>
+		<version>${manager-version}</version>
+    </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>

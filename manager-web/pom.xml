@@ -15,12 +15,11 @@
             <artifactId>manager-dal</artifactId>
 			<version>${manager-version}</version>
         </dependency>
-        <dependency>
+         <dependency>
 			<groupId>team.manager</groupId>
-            <artifactId>manager-shiro</artifactId>
+            <artifactId>manager-service</artifactId>
 			<version>${manager-version}</version>
         </dependency>
-		
     </dependencies>
 	<build>
 		<finalName>teacher-manager</finalName>
