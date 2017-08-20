@@ -1,0 +1,108 @@
+package io.renren.controller;
+
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+import javax.servlet.ServletException;
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import org.apache.shiro.authc.AuthenticationException;
+import org.apache.shiro.authc.IncorrectCredentialsException;
+import org.apache.shiro.authc.LockedAccountException;
+import org.apache.shiro.authc.UnknownAccountException;
+import org.apache.shiro.crypto.hash.Sha256Hash;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.google.code.kaptcha.Producer;
+
+import io.renren.entity.SysUserEntity;
+import io.renren.service.SysUserService;
+import io.renren.utils.R;
+
+/**
+ * 登录相关
+ * 
+ * @author chenshun
+ * @email sunlightcs@gmail.com
+ * @date 2016年11月10日 下午1:15:31
+ */
+@Controller
+public class SysLoginController extends AbstractController{
+	@Autowired
+	private Producer producer;
+	@Autowired
+	private SysUserService sysUserService;
+	
+	@RequestMapping("captcha.jpg")
+	public void captcha(HttpServletResponse response)throws ServletException, IOException {
+        response.setHeader("Cache-Control", "no-store, no-cache");
+        response.setContentType("image/jpeg");
+
+        //生成文字验证码
+        String text = producer.createText();
+        //生成图片验证码
+        BufferedImage image = producer.createImage(text);
+        //保存到shiro session
+        getSession().setAttribute(getRequest().getSession().getId(), text);
+        
+        ServletOutputStream out = response.getOutputStream();
+        ImageIO.write(image, "jpg", out);
+	}
+	
+	/**
+	 * 登录
+	 */
+	@ResponseBody
+	@RequestMapping(value = "/sys/login", method = RequestMethod.POST)
+	public R login(String username, String password)throws IOException {
+		//获取请求的sessionid
+		HttpSession session = getSession();
+		String sessionid = getRequest().getSession().getId();
+		logger.info("sessionid"+sessionid);
+		try{
+			password = new Sha256Hash(password).toHex();
+			SysUserEntity queryByUserName = sysUserService.queryByUserName(username);
+			if(queryByUserName==null)
+			{
+				throw new AuthenticationException();
+			}else
+			{
+				if(!password.equals(queryByUserName.getPassword()))
+				{
+					throw new AuthenticationException();
+				}else
+				{
+					logger.info("登录成功"+queryByUserName);
+					session.setAttribute(sessionid, queryByUserName);
+				}
+			}
+		}catch (UnknownAccountException e) {
+			return R.error(e.getMessage());
+		}catch (IncorrectCredentialsException e) {
+			return R.error(e.getMessage());
+		}catch (LockedAccountException e) {
+			return R.error(e.getMessage());
+		}catch (AuthenticationException e) {
+			return R.error("账户验证失败");
+		}
+	    
+		return R.ok();
+	}
+	
+	/**
+	 * 退出
+	 */
+	@RequestMapping(value = "logout", method = RequestMethod.GET)
+	public String logout() {
+		/*ShiroUtils.logout();*/
+		return "redirect:login.html";
+	}
+	
+}

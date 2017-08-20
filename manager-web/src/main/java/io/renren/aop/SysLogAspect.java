@@ -1,12 +1,10 @@
 package io.renren.aop;
 
-import com.alibaba.fastjson.JSON;
-import io.renren.annotation.SysLog;
-import io.renren.entity.SysLogEntity;
-import io.renren.service.SysLogService;
-import io.renren.utils.HttpContextUtils;
-import io.renren.utils.IPUtils;
-import io.renren.utils.ShiroUtils;
+import java.lang.reflect.Method;
+import java.util.Date;
+
+import javax.servlet.http.HttpServletRequest;
+
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -15,9 +13,13 @@ import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.servlet.http.HttpServletRequest;
-import java.lang.reflect.Method;
-import java.util.Date;
+import com.alibaba.fastjson.JSON;
+
+import io.renren.annotation.SysLog;
+import io.renren.entity.SysLogEntity;
+import io.renren.service.SysLogService;
+import io.renren.utils.HttpContextUtils;
+import io.renren.utils.IPUtils;
 
 
 /**
@@ -66,8 +68,7 @@ public class SysLogAspect {
 		sysLog.setIp(IPUtils.getIpAddr(request));
 		
 		//用户名
-		String username = ShiroUtils.getUserEntity().getUsername();
-		sysLog.setUsername(username);
+		sysLog.setUsername("");
 		
 		sysLog.setCreateDate(new Date());
 		//保存系统日志
