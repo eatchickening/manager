@@ -23,7 +23,7 @@ target/
 *.iml
 .project
 .settings
-manager-web/src/main/webapp/bower_components/**
+manager-web/src/main/webapp/src/bower_components/**
 manager-web/src/main/webapp/node_modules/**
 manager-web/src/main/webapp/.tmp/**
 manager-web/src/main/webapp/release/**
@@ -31,4 +31,5 @@ manager-web/src/main/webapp/release/**
 */.settings/**
 .settings/**
 */.project
+.vscode
 manager-dal/src/main/resources/db.properties

@@ -16,7 +16,10 @@
 	<context:component-scan base-package="io.renren" />
 	<context:annotation-config />
 	<mvc:default-servlet-handler />
-	<mvc:resources mapping="/**" location="/release/" />
+	<!-- dev mode mapping -->
+	<mvc:resources mapping="/**" location="/.tmp/serve/, /src/" />
+	<!-- prod mode mapping -->
+	<!-- <mvc:resources mapping="/**" location="/release/" /> -->
 	<aop:aspectj-autoproxy proxy-target-class="true" />
 	<mvc:annotation-driven>
 		<mvc:message-converters register-defaults="true">
