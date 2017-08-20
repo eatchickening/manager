@@ -33,3 +33,4 @@ manager-web/src/main/webapp/release/**
 */.project
 .vscode
 manager-dal/src/main/resources/db.properties
+manager-web/src/main/webapp/bower_components/
