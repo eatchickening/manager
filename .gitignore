@@ -32,4 +32,3 @@ manager-web/src/main/webapp/release/**
 .settings/**
 */.project
 manager-dal/src/main/resources/db.properties
-.gitignore
