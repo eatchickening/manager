@@ -1,8 +1,10 @@
 package io.renren.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * 系统页面视图
@@ -19,4 +21,9 @@ public class SysPageController {
 		return module + "/" + url + ".html";
 	}
 
+	@RequestMapping(value ="/", method = RequestMethod.GET)
+	public String home(Model model)
+	{
+		return"auth.html";
+	}
 }
