@@ -1,0 +1,138 @@
+div[mscp-card] .mscpCardMain {
+    display: flex;
+    background: white;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    max-height: 800px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    margin: 3px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.25);
+    border: 3px green solid;
+}
+
+div[mscp-card] .mscpCardMain:hover {
+    box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.25);
+    border: 3px skyblue solid;
+}
+
+.mscpCardMain div.cardHeader {
+    display: flex;
+    justify-content: flex-end;
+    height: 10%;
+    font-size: 0.8rem;
+}
+
+.mscpCardMain div.name {
+    padding: 0.5rem;
+    // margin-top: 0.5rem;
+    // margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    border-top: solid thin grey;
+    // border-bottom: solid thin gray;
+}
+
+.mscpCardMain div.sub {
+    padding: 0.5rem;
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 1rem;
+    // border-bottom: solid thin gray;
+}
+
+.mscpCardMain .buttonGroup {
+    display: flex;
+    flex: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: baseline
+}
+
+.mscpCardMain button {
+    flex-grow: 1;
+    margin: 2px;
+    font-size: 0.6rem
+}
+
+.mscpCardMain div.description {
+    // margin: 2rem;
+    padding: 1rem;
+    font-size: 0.6rem;
+}
+
+.mscpCardMain img.logo {
+    // padding: 8px, 8px;
+    height: 50%;
+    width: 100%;
+}
+
+
+/* Boxes */
+
+.box {
+    background: #FFF;
+    border: solid 4px #CCC;
+    cursor: pointer;
+    display: inline-block;
+    height: 100px;
+    margin: 25px;
+    position: relative;
+    width: 100px;
+}
+
+.box::before,
+.box::after {
+    background: transparant;
+    content: '';
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    width: 0;
+}
+
+.box::before {
+    border-bottom: 0;
+    border-left: 0;
+    left: -4px;
+    top: -4px;
+}
+
+.box::after {
+    border-right: 0;
+    border-top: 0;
+    bottom: -4px;
+    right: -4px;
+}
+
+// div[mscp-card] .mscpCardMain:hover::before,
+// .box:hover::after {
+//     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.25);
+//     height: 104px;
+//     opacity: 1;
+//     width: 104px;
+// }
+// .box:hover::before,
+// .box:hover::after {
+//     height: 104px;
+//     opacity: 1;
+//     width: 104px;
+// }
+// div[mscp-card] .mscpCardMain::before,
+// div[mscp-card] .mscpCardMain::after {
+//     border: solid 4px #4CAF50;
+// }
+// /* Box Animations */
+// .double::before {
+//     transition: opacity 0s .4s, width .2s .2s, height .2s 0s;
+// }
+// .double:hover::before {
+//     transition: opacity 0s 0s, width .2s 0s, height .2s .2s;
+// }
+// .double::after {
+//     transition: opacity 0s .4s, width .2s .2s, height .2s 0s;
+// }
+// .double:hover::after {
+//     transition: opacity 0s 0s, width .2s 0s, height .2s .2s;
+// }

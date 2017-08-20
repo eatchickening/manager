@@ -3,14 +3,10 @@
   border-radius: 5px;
   border: none;
   color: $dropdown-text;
-}
-
-.modal-header {
-  color: $label-text;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  .modal-title {
-    color: $dropdown-text;
+  .modal-header {
+    color: $label-text;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
   }
 }
 
@@ -62,7 +58,7 @@ $modal-input-border: #e7e7e7;
     margin-right: 3px;
   }
   .sn-link-close {
-    color: $dropdown-text;
+    color: #949494;
     font-size: 30px;
     &:hover {
       color: $danger;
@@ -79,6 +75,10 @@ $modal-input-border: #e7e7e7;
   }
 }
 
+.modal-content .modal-header .modal-title{
+  color: $default-text;
+}
+
 .message-modal {
   .modal-header {
     text-align: center;
@@ -92,6 +92,10 @@ $modal-input-border: #e7e7e7;
     margin-bottom: 12px;
     margin-top: 18px;
   }
+  .modal-title-error {
+    @extend .modal-title;
+    color: white;
+  }
   .modal-body {
     text-align: center;
     padding: 0;
@@ -101,4 +105,24 @@ $modal-input-border: #e7e7e7;
     margin: 24px 0 12px;
     text-align: center;
   }
+}
+
+@mixin message-modal-color($color) {
+  .modal-header {
+    color: $label-text;
+    background: $color;
+  }
+}
+
+.success-modal {
+  @include message-modal-color($success);
+}
+.info-modal {
+  @include message-modal-color($info);
+}
+.warning-modal {
+  @include message-modal-color($warning);
+}
+.danger-modal {
+  @include message-modal-color($danger);
 }

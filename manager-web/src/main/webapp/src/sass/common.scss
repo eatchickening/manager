@@ -1,3 +1,40 @@
 @import 'theme/conf/mixins';
+// @import 'theme/conf/colorScheme/blur';
 @import 'theme/conf/colorScheme/mint';
 @import 'theme/conf/variables';
+.dropdown-menu .sub-menu {
+    left: 100%;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    margin-top: -1px;
+}
+
+.dropdown-menu li:hover>.sub-menu {
+    visibility: visible;
+    display: block;
+}
+
+.whole {
+    height: 100%;
+    width: 100%;
+}
+
+// .ba-wizard [ng-cloak]{
+//   display: none !important;
+// }
+.ng-hide.ng-hide-animate {
+    display: none !important;
+}
+
+// html,
+// body {
+//     height: 100%;
+// }
+.increasing {
+    color: greenyellow
+}
+
+.decreasing {
+    color: red
+}

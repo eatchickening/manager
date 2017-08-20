@@ -24,6 +24,6 @@ public class SysPageController {
 	@RequestMapping(value ="/", method = RequestMethod.GET)
 	public String home(Model model)
 	{
-		return"auth.html";
+		return"index.html";
 	}
 }

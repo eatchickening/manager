@@ -4,7 +4,7 @@
     function routeConfig($stateProvider) {
         $stateProvider
             .state('login', {
-                url: 'login',
+                url: '/login',
                 views: {
                     'whole@': {
                         templateUrl: 'app/pages/login/login.html'
@@ -14,6 +14,6 @@
             });
     }
 
-    angular.modules('BlurAdmin.pages.login', [])
+    angular.module('BlurAdmin.pages.login', [])
         .config(routeConfig);
 })();

@@ -8,20 +8,11 @@
   angular.module('BlurAdmin.pages', [
       'ui.router',
       'BlurAdmin.pages.login',
-
-      'BlurAdmin.pages.dashboard',
-      'BlurAdmin.pages.ui',
-      'BlurAdmin.pages.components',
-      'BlurAdmin.pages.form',
-      'BlurAdmin.pages.tables',
-      'BlurAdmin.pages.charts',
-      'BlurAdmin.pages.maps',
-      'BlurAdmin.pages.profile',
     ])
     .config(routeConfig);
 
   /** @ngInject */
-  function routeConfig($urlRouterProvider) {
+  function routeConfig($stateProvider,$urlRouterProvider) {
     $stateProvider
       .state('root', {
         url: '',
@@ -32,19 +23,22 @@
           }
         },
         resolve: {
-          userObj: function($rootScope) {
+          userObj: function($rootScope, $state) {
             if ($rootScope.user) {
               return;
             }
-            if (!rootScope.user) {
+            if (!$rootScope.user) {
               $state.go('login');
               return;
             }
           }
         }
       });
-    $urlRouterProvider.otherwise('/dashboard');
+    $urlRouterProvider.otherwise('/login');
 
   }
+
+  // angular.module('BlurAdmin.pages')
+  //   .constant('_', window._);
 
 })();
