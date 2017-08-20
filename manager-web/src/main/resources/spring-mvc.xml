@@ -56,7 +56,7 @@
 	</bean>
 	
 	<bean id="velocityConfigurer" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
-        <property name="resourceLoaderPath" value="/release/" />
+        <property name="resourceLoaderPath" value="/.tmp/serve" />
         <property name="velocityProperties">
           <props>
             <prop key="input.encoding">UTF-8</prop>
