@@ -16,6 +16,7 @@
 	<context:component-scan base-package="io.renren" />
 	<context:annotation-config />
 	<mvc:default-servlet-handler />
+	<mvc:resources mapping="/**" location="/release/" />
 	<aop:aspectj-autoproxy proxy-target-class="true" />
 	<mvc:annotation-driven>
 		<mvc:message-converters register-defaults="true">
@@ -104,5 +105,7 @@
 	        </bean>
 	    </property>
 	</bean>
+
+
 	
 </beans>
