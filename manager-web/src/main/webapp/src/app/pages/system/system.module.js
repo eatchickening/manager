@@ -9,7 +9,7 @@
                 template: '<ui-view></ui-view>',
                 title: '系统管理',
                 sidebarMeta: {
-                    icon: 'ion-android-home',
+                    icon: 'ion-gear-a',
                     order: 4,
                 }
             }).state('root.system.log', {

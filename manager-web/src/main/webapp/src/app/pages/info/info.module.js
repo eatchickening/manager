@@ -9,7 +9,7 @@
                 template: '<ui-view></ui-view>',
                 title: '信息查询',
                 sidebarMeta: {
-                    icon: 'ion-android-home',
+                    icon: 'ion-search',
                     order: 3,
                 }
             }).state('root.info.school', {
