@@ -9,6 +9,8 @@ import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.sun.tools.doclets.formats.html.PackageWriterImpl;
+import org.apache.commons.lang.StringUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.LockedAccountException;
@@ -16,6 +18,7 @@ import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.crypto.hash.Sha256Hash;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -61,8 +64,16 @@ public class SysLoginController extends AbstractController{
 	 */
 	@ResponseBody
 	@RequestMapping(value = "/sys/login", method = RequestMethod.POST)
-	public R login(String username, String password)throws IOException {
-		//获取请求的sessionid
+	public R login(@RequestBody SysUserEntity user)throws IOException {
+	    String username = user.getUsername();
+	    String password = user.getPassword();
+        System.out.println("username = " + username);
+        System.out.println("password = " + password);
+        if (StringUtils.isEmpty(username) || StringUtils.isEmpty(password)) {
+            return R.error("参数为空!");
+        }
+
+        //获取请求的sessionid
 		HttpSession session = getSession();
 		String sessionid = getRequest().getSession().getId();
 		logger.info("sessionid"+sessionid);
