@@ -7,7 +7,7 @@
                 url: '/home',
                 templateUrl: 'app/pages/home/home.html',
                 title: '主页',
-                controller: 'HomeControl',
+                controller: 'HomeCtrl',
                 sidebarMeta: {
                     icon: 'fa fa-tachometer',
                     order: 0
