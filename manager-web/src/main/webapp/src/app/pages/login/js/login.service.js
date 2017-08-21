@@ -5,7 +5,7 @@
         return {
             login: function (username, password) {
                 var deferred = $q.defer();
-                $http.post('http://localhost:8080/teacher-manager/sys/login', {
+                $http.post('http://localhost:8080/sys/login', {
                     username: username,
                     password: password
                 }).then(function (response) {

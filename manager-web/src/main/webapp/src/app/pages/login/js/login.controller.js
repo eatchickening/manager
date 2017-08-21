@@ -6,7 +6,7 @@
             console.log("test");
             $scope.login = function () {
                 LoginService.login($scope.user.username, $scope.user.password).then(function(data){
-                    if (data && data.code === 500) {
+                    if (data && data.status === 200) {
                         $rootScope.user = {
                             username: $scope.user.username,
                             password: $scope.user.password
