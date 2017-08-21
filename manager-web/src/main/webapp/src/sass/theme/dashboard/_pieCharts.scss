@@ -1,12 +1,32 @@
 .pie-charts {
   color: $default-text;
+
   .pie-chart-item-container {
+    position: relative;
     padding: 0 15px;
+    float: left;
     box-sizing: border-box;
+
     .panel {
       height: $small-panel-height;
     }
   }
+  @media screen and (min-width: 1325px) {
+    .pie-chart-item-container {
+      width: 25%;
+    }
+  }
+  @media screen and (min-width: 700px) and (max-width: 1325px)  {
+    .pie-chart-item-container {
+      width: 50%;
+    }
+  }
+  @media screen and (max-width: 700px)  {
+    .pie-chart-item-container {
+      width: 100%;
+    }
+  }
+
   .pie-chart-item {
     position: relative;
     .chart-icon {
@@ -16,13 +36,15 @@
       z-index: -1;
     }
   }
-  @media screen and (min-width: 1325px) and (max-width: 1650px),
-  (min-width: 700px) and (max-width: 830px),
-  (max-width: 400px) {
+  @media screen and
+    (min-width: 1325px) and (max-width: 1650px),
+    (min-width: 700px) and (max-width: 830px),
+    (max-width: 400px) {
     .chart-icon {
       display: none;
     }
   }
+
   .chart {
     position: relative;
     display: inline-block;
@@ -40,25 +62,21 @@
     display: inline-block;
     line-height: 84px;
     z-index: 2;
-    font-size: 19px;
+    font-size: 16px;
   }
   .percent:after {
     content: '%';
     margin-left: 0.1em;
-    font-size: .9em;
+    font-size: .8em;
   }
   .description {
     display: inline-block;
     padding: 20px 0 0 20px;
-    font-size: 1rem;
+    font-size: 18px;
     opacity: 0.9;
     .description-stats {
-      padding-top: 15px;
-      font-size: 1rem;
-    };
-    .description-detail {
-      padding-top: 15px;
-      font-size: 1.4rem;
+      padding-top: 8px;
+      font-size: 24px;
     }
   }
   .angular {

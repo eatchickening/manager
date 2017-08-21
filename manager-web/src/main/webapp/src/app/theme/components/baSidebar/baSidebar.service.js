@@ -22,12 +22,12 @@
         this.getMenuItems = function() {
           var states = defineMenuItemStates();
           var menuItems = states.filter(function(item) {
-            return item.level == 0;
+            return item.level == 1;
           });
 
           menuItems.forEach(function(item) {
             var children = states.filter(function(child) {
-              return child.level == 1 && child.name.indexOf(item.name) === 0;
+              return child.level == 2 && child.name.indexOf(item.name) === 0;
             });
             item.subMenu = children.length ? children : null;
           });

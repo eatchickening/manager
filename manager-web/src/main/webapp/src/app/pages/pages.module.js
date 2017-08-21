@@ -8,7 +8,7 @@
   angular.module('BlurAdmin.pages', [
       'ui.router',
       'BlurAdmin.pages.login',
-      'BlurAdmin.pages.home'
+      'BlurAdmin.pages.home',
     ])
     .config(routeConfig);
 
