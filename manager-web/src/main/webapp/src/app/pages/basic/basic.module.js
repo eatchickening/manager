@@ -9,7 +9,7 @@
                 template: '<ui-view></ui-view>',
                 title: '基础设置',
                 sidebarMeta: {
-                    icon: 'ion-android-home',
+                    icon: 'ion-settings',
                     order: 2,
                 }
             }).state('root.basic.department', {
