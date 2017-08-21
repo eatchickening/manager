@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('BlurAdmin.pages.login').factory('LoginService', ['$http', '$q', function($http, $q){
+    angular.module('chicken.pages.login').factory('LoginService', ['$http', '$q', function($http, $q){
         return {
             login: function (username, password) {
                 var deferred = $q.defer();

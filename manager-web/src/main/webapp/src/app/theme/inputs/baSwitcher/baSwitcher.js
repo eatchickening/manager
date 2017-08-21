@@ -5,7 +5,7 @@
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.theme.inputs')
+  angular.module('chicken.theme.inputs')
       .directive('baSwitcher', baSwitcher);
 
   /** @ngInject */

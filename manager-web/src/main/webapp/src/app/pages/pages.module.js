@@ -5,10 +5,13 @@
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.pages', [
+  angular.module('chicken.pages', [
       'ui.router',
-      'BlurAdmin.pages.login',
-      'BlurAdmin.pages.home',
+      'chicken.pages.login',
+      'chicken.pages.home',
+      'chicken.pages.basic',
+      'chicken.pages.info',
+      'chicken.pages.system'
     ])
     .config(routeConfig);
 
@@ -39,7 +42,7 @@
 
   }
 
-  // angular.module('BlurAdmin.pages')
+  // angular.module('chicken.pages')
   //   .constant('_', window._);
 
 })();

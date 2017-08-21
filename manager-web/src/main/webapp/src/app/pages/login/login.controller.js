@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('BlurAdmin.pages.login')
+    angular.module('chicken.pages.login')
         .controller('LoginCtrl', function ($rootScope, $scope, $state, toastr, LoginService) {
             console.log("test");
             $scope.login = function () {

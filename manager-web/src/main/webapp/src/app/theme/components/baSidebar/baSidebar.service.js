@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular.module('BlurAdmin.theme.components')
+  angular.module('chicken.theme.components')
       .provider('baSidebarService', baSidebarServiceProvider);
 
   /** @ngInject */

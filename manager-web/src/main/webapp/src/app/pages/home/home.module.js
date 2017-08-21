@@ -6,6 +6,7 @@
             .state('root.home', {
                 url: '/home',
                 templateUrl: 'app/pages/home/home.html',
+                controller: 'HomeCtrl',
                 title: '主页',
                 sidebarMeta: {
                     icon: 'ion-android-home',
@@ -14,6 +15,6 @@
             });
     }
 
-    angular.module('BlurAdmin.pages.home', [])
+    angular.module('chicken.pages.home', [])
         .config(routeConfig);
 })();

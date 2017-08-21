@@ -14,6 +14,6 @@
             });
     }
 
-    angular.module('BlurAdmin.pages.login', [])
+    angular.module('chicken.pages.login', [])
         .config(routeConfig);
 })();
